@@ -14,7 +14,7 @@ const render = () => {
 
 render();
 
-document.addEventListener("stateChanged", (event) => {
-  console.log("State of data has changed. Regenerating HTML...");
-  render();
-});
+// document.addEventListener("stateChanged", (event) => {
+//   console.log("State of data has changed. Regenerating HTML...");
+//   render();
+// });
