@@ -1,7 +1,7 @@
 // Here are the four main methods used on HTTP requests:
 // ----------------------------------------------------
 // Method:	    Description:
-//  GET	          Please give me this resource.
+// GET	          Please give me this resource.
 //  POST	        Please create something new.
 //  PUT	          Please modify an existing resource.
 //  DELETE	      Please delete an existing.
@@ -37,5 +37,7 @@ export const sendRequest = (userServiceRequest) => {
 
   return fetch(`${API}/requests`, fetchOptions)
     .then((response) => response.json())
-    .then(() => {});
+    .then(() => {
+      mainContainer.dispatchEvent(new CustomEvent("stateChanged"));
+    });
 };
